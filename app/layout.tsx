@@ -1,13 +1,16 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Providers from "@components/Providers";
+import Navbar from "@components/Navbar";
 
-const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <Navbar />
-      <main>{children}</main>
-    </div>
+    <html lang="en">
+      <body>
+        <Providers> {/* Wrap everything inside Providers */}
+          <Navbar />
+          <main className="container mx-auto p-4">{children}</main>
+        </Providers>
+      </body>
+    </html>
   );
-};
-
-export default Layout;
+}
