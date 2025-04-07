@@ -1,12 +1,12 @@
 import React from 'react';
 
-const HomePage: React.FC = () => {
+
+
+export default function Home() {
   return (
     <div>
-      <h1>Welcome to My Website</h1>
-      <p>This is a TypeScript-powered Next.js site.</p>
+      <h1>Upload Files to Google Docs</h1>
+      
     </div>
   );
-};
-
-export default HomePage;
+}
